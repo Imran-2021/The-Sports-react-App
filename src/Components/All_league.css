@@ -1,0 +1,72 @@
+.header{
+    padding: 20px;
+    margin: 20px;
+    background-color: #19dee9;
+    color: #130f40;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h1 {
+        color: #eb4d4b;
+        text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
+}
+.header2{
+   padding: 20px;
+    background-color: rgb(67, 86, 104);
+    color: white;
+    border: 1px solid #535c68;
+    box-sizing: border-box;
+}
+.leagues{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+   margin: 20px;
+   
+}
+
+.btn{
+    border: none;
+    padding: 10px 15px;
+    background-color: #19dee9;
+    border-radius:2px;
+    cursor: pointer;
+}
+.header3{
+    margin: 20px;
+    display: grid;
+    grid-template-columns:repeat(2,40%);
+    grid-gap: 20px;
+    background-color: rgb(67, 86, 104);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: white;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+.header6{
+    background-color: rgb(225, 191, 226);
+    padding: 30px;
+    margin: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .leagues{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .header3{
+        grid-template-columns:repeat(1,1fr);
+    }
+  }
+@media only screen and (max-width: 300px) {
+    .leagues{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+  }
