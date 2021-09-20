@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.development';
+// import { useEffect } from 'react/cjs/react.development';
 
 const LeagueDetails = () => {
     const {asdf}=useParams();
