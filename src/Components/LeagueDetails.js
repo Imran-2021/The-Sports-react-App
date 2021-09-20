@@ -12,10 +12,11 @@ const LeagueDetails = () => {
         fetch(url2)
         .then(req=>req.json())
         .then(data=>{
-            setLeagueDetails(data.leagues[0])
+            setLeagueDetails(data?.leagues[0])
           
         })
     },[])
+    console.log(leagueDetails.strLeague);
    const {strLeague,intFormedYear,strCountry,strGender,strSport,strDescriptionEN}=leagueDetails;
 
     return (
