@@ -6,22 +6,13 @@ import { useEffect } from 'react/cjs/react.development';
 const LeagueDetails = () => {
     const {asdf}=useParams();
     const [leagueDetails,setLeagueDetails]=useState({})
-    useEffect(()=>{
-        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${asdf}`)
-        .then(res=>res.json())
-        .then(data =>{ 
+    const {strLeague,intFormedYear,strCountry,strGender,strSport,strDescriptionEN}=leagueDetails;
+    useEffect(()=>{      
+        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${asdf}`)
+        .then(req=>req.json())
+        .then(data=>setLeagueDetails(data.leagues[0]));
+    },[asdf])
   
-            setLeagueDetails(data.teams[0])
-        })
-      },[asdf])
-    // useEffect(()=>{
-    //     const url2=`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${asdf}`
-        
-    //     fetch(url2)
-    //     .then(req=>req.json())
-    //     .then(data=>setLeagueDetails(data?.leagues[0]))
-    // },[asdf])
-   const {strLeague,intFormedYear,strCountry,strGender,strSport,strDescriptionEN}=leagueDetails;
 
     return (
         <div>
