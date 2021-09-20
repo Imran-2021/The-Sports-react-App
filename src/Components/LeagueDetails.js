@@ -13,10 +13,8 @@ const LeagueDetails = () => {
         .then(req=>req.json())
         .then(data=>{
             setLeagueDetails(data?.leagues[0])
-          
         })
-    },[])
-    console.log(leagueDetails.strLeague);
+    },[asdf])
    const {strLeague,intFormedYear,strCountry,strGender,strSport,strDescriptionEN}=leagueDetails;
 
     return (
