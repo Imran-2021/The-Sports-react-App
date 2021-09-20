@@ -5,7 +5,7 @@ import { useEffect } from 'react/cjs/react.development';
 
 const LeagueDetails = () => {
     const {asdf}=useParams();
-    const [leagueDetails,setLeagueDetails]=useState([])
+    const [leagueDetails,setLeagueDetails]=useState({})
     useEffect(()=>{
         const url2=`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${asdf}`
         
