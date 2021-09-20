@@ -7,14 +7,20 @@ const LeagueDetails = () => {
     const {asdf}=useParams();
     const [leagueDetails,setLeagueDetails]=useState({})
     useEffect(()=>{
-        const url2=`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${asdf}`
-        
-        fetch(url2)
-        .then(req=>req.json())
-        .then(data=>{
-            setLeagueDetails(data?.leagues[0])
+        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${asdf}`)
+        .then(res=>res.json())
+        .then(data =>{ 
+  
+            setLeagueDetails(data.teams[0])
         })
-    },[asdf])
+      },[asdf])
+    // useEffect(()=>{
+    //     const url2=`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${asdf}`
+        
+    //     fetch(url2)
+    //     .then(req=>req.json())
+    //     .then(data=>setLeagueDetails(data?.leagues[0]))
+    // },[asdf])
    const {strLeague,intFormedYear,strCountry,strGender,strSport,strDescriptionEN}=leagueDetails;
 
     return (
