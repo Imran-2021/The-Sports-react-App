@@ -53,7 +53,7 @@
     padding: 30px;
     margin: 20px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 695px) {
     .leagues{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -63,7 +63,7 @@
         grid-template-columns:repeat(1,1fr);
     }
   }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
     .leagues{
         display: grid;
         grid-template-columns: repeat(1,1fr);
